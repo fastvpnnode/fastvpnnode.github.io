@@ -1,4 +1,4 @@
-# VPN高速节点 | 9月29日22.7M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Clash节点/Singbox节点节点推荐  更新时间 2026-09-29 10:34:43
+# VPN高速节点 | 10月6日20.1M/S|免费Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点节点推荐  更新时间 2026-10-06 10:36:50
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://fastvpnnode.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://fastvpnnode.github.io/uploads/2026/09/0-20260929.yaml
-- https://fastvpnnode.github.io/uploads/2026/09/1-20260929.yaml
-- https://fastvpnnode.github.io/uploads/2026/09/2-20260929.yaml
-- https://fastvpnnode.github.io/uploads/2026/09/3-20260929.yaml
-- https://fastvpnnode.github.io/uploads/2026/09/4-20260929.yaml
+- https://fastvpnnode.github.io/uploads/2026/10/0-20261006.yaml
+- https://fastvpnnode.github.io/uploads/2026/10/1-20261006.yaml
+- https://fastvpnnode.github.io/uploads/2026/10/2-20261006.yaml
+- https://fastvpnnode.github.io/uploads/2026/10/3-20261006.yaml
+- https://fastvpnnode.github.io/uploads/2026/10/4-20261006.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://fastvpnnode.github.io/uploads/2026/09/0-20260929.txt
-- https://fastvpnnode.github.io/uploads/2026/09/1-20260929.txt
-- https://fastvpnnode.github.io/uploads/2026/09/2-20260929.txt
-- https://fastvpnnode.github.io/uploads/2026/09/3-20260929.txt
-- https://fastvpnnode.github.io/uploads/2026/09/4-20260929.txt
+- https://fastvpnnode.github.io/uploads/2026/10/0-20261006.txt
+- https://fastvpnnode.github.io/uploads/2026/10/1-20261006.txt
+- https://fastvpnnode.github.io/uploads/2026/10/2-20261006.txt
+- https://fastvpnnode.github.io/uploads/2026/10/3-20261006.txt
+- https://fastvpnnode.github.io/uploads/2026/10/4-20261006.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://fastvpnnode.github.io/uploads/2026/09/20260929.json
+- https://fastvpnnode.github.io/uploads/2026/10/20261006.json
 
 ## 更多Clash节点订阅 ：
 
