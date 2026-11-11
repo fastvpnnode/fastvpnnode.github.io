@@ -262,9 +262,14 @@ Sony设备的操作系统（如Android TV）对许多主流VPN和科学上网工
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS + XTLS 模式在移动网络下表现如何？</h5></div>
+    <div class="panel-heading"><h5>SSR 节点和 V2Ray 节点可以混合使用吗？</h5></div>
     <div class="panel-body">
-        XTLS 降低加密开销，减少握手次数，适合高延迟或不稳定的移动网络。结合策略组和多出口节点，可提升访问速度和连接稳定性，确保用户体验流畅。<hr />    </div>
+        可以，但要使用支持多协议的客户端，如 Clash、Sing-box、Mihomo 等。这类客户端能在同一配置文件中加载不同协议的节点，通过规则分流让 SSR 与 V2Ray 同时工作。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Trojan 如何实现伪装？</h5></div>
+    <div class="panel-body">
+        Trojan 使用 TLS 协议模拟正常的 HTTPS 流量，防火墙难以区分其与普通网站访问的区别。通过伪装域名、SNI 和证书匹配机制，它能在保障安全的同时隐藏真实代理流量。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VLESS + XTLS 模式在移动网络下表现如何？</h5></div>
@@ -272,29 +277,14 @@ Sony设备的操作系统（如Android TV）对许多主流VPN和科学上网工
         XTLS 模式减少握手次数和加密开销，适合高延迟或不稳定移动网络。结合策略组和多出口节点，可提高访问速度和连接稳定性，保证用户体验流畅。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Mihomo 节点分组功能有什么优势？</h5></div>
+    <div class="panel-heading"><h5>PassWall2 如何自动切换最优节点？</h5></div>
     <div class="panel-body">
-        分组管理可按延迟、地区或用途分类节点，并结合策略组实现自动分流。用户可快速选择最优节点，提高访问速度和稳定性，方便管理大量节点并优化维护效率。<hr />    </div>
+        PassWall2 会定期测试节点延迟和丢包率，并结合策略组自动切换到最优节点。无需手动干预即可保证网页、视频和游戏流量高速稳定访问，优化整体网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekobox 如何在 Android 上导入配置？</h5></div>
+    <div class="panel-heading"><h5>VLESS + XTLS 模式在移动网络下表现如何？</h5></div>
     <div class="panel-body">
-        打开 Nekobox，点击“导入配置”按钮，选择订阅链接或本地 JSON 文件。程序会解析后自动生成节点列表，用户可一键连接或测速筛选最优节点。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mihomo 是什么？</h5></div>
-    <div class="panel-body">
-        Mihomo 是 Clash Premium 的开源替代项目，兼容原版 Clash 配置文件并扩展了部分新功能。它性能优异、内存占用低，适用于希望自定义构建代理环境的高级用户。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 节点和 V2Ray 节点可以混合使用吗？</h5></div>
-    <div class="panel-body">
-        可以，但要使用支持多协议的客户端，如 Clash、Sing-box、Mihomo 等。这类客户端能在同一配置文件中加载不同协议的节点，通过规则分流让 SSR 与 V2Ray 同时工作。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何在 Windows 上安装 Clash for Windows？</h5></div>
-    <div class="panel-body">
-        在 Windows 上安装 Clash for Windows 十分简单。只需前往官方 GitHub 页面下载最新版安装包，运行安装程序后导入订阅链接或配置文件即可。安装完成后，用户可以通过图形化界面方便地切换节点、编辑规则和控制代理模式。<hr />    </div>
+        XTLS 降低加密开销，减少握手次数，适合高延迟或不稳定的移动网络。结合策略组和多出口节点，可提升访问速度和连接稳定性，确保用户体验流畅。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>V2Ray 的 outbound freedom 模式有什么作用？</h5></div>
@@ -302,14 +292,24 @@ Sony设备的操作系统（如Android TV）对许多主流VPN和科学上网工
         freedom 是直连模块，可用于分流策略中实现部分流量直连。用户可在 routing 中设置匹配规则，将国内域名或局域网 IP 指向 freedom 出口，从而减少代理开销和延迟。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 如何自动切换最优节点？</h5></div>
+    <div class="panel-heading"><h5>如何在 Windows 上安装 Clash for Windows？</h5></div>
     <div class="panel-body">
-        PassWall2 会定期测试节点延迟和丢包率，并结合策略组自动切换到最优节点。无需手动干预即可保证网页、视频和游戏流量高速稳定访问，优化整体网络体验。<hr />    </div>
+        在 Windows 上安装 Clash for Windows 十分简单。只需前往官方 GitHub 页面下载最新版安装包，运行安装程序后导入订阅链接或配置文件即可。安装完成后，用户可以通过图形化界面方便地切换节点、编辑规则和控制代理模式。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 如何实现伪装？</h5></div>
+    <div class="panel-heading"><h5>Nekobox 如何在 Android 上导入配置？</h5></div>
     <div class="panel-body">
-        Trojan 使用 TLS 协议模拟正常的 HTTPS 流量，防火墙难以区分其与普通网站访问的区别。通过伪装域名、SNI 和证书匹配机制，它能在保障安全的同时隐藏真实代理流量。    </div>
+        打开 Nekobox，点击“导入配置”按钮，选择订阅链接或本地 JSON 文件。程序会解析后自动生成节点列表，用户可一键连接或测速筛选最优节点。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mihomo 节点分组功能有什么优势？</h5></div>
+    <div class="panel-body">
+        分组管理可按延迟、地区或用途分类节点，并结合策略组实现自动分流。用户可快速选择最优节点，提高访问速度和稳定性，方便管理大量节点并优化维护效率。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mihomo 是什么？</h5></div>
+    <div class="panel-body">
+        Mihomo 是 Clash Premium 的开源替代项目，兼容原版 Clash 配置文件并扩展了部分新功能。它性能优异、内存占用低，适用于希望自定义构建代理环境的高级用户。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -357,16 +357,16 @@ Sony设备的操作系统（如Android TV）对许多主流VPN和科学上网工
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/node-share-2026-9-21.htm" title="VPN高速节点 | 9月21日22.3M/S|免费V2ray节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点节点推荐">VPN高速节点 | 9月21日22.3M/S|免费V2ray节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点节点推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-28-clash-verge-rev-github.htm" title="VPN高速节点 | 10月28日21.3M/S|免费SSR节点/Trojan节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点节点推荐">VPN高速节点 | 10月28日21.3M/S|免费SSR节点/Trojan节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点节点推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-node-github-2026-10-17.htm" title="VPN高速节点 | 10月17日22.4M/S|免费Trojan节点/SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Singbox节点节点推荐">VPN高速节点 | 10月17日22.4M/S|免费Trojan节点/SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Singbox节点节点推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-node-github-2026-9-29.htm" title="VPN高速节点 | 9月29日21.4M/S|免费Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点节点推荐">VPN高速节点 | 9月29日21.4M/S|免费Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点/SSR节点/Clash节点节点推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-4-clash-verge-rev-github.htm" title="VPN高速节点 | 10月4日22.9M/S|免费Singbox节点/V2ray节点/Shadowrocket节点/Trojan节点/SSR节点/Clash节点节点推荐">VPN高速节点 | 10月4日22.9M/S|免费Singbox节点/V2ray节点/Shadowrocket节点/Trojan节点/SSR节点/Clash节点节点推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-26-clash-stash-node.htm" title="VPN高速节点 | 10月26日19.9M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Trojan节点/Singbox节点/SSR节点节点推荐">VPN高速节点 | 10月26日19.9M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Trojan节点/Singbox节点/SSR节点节点推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-6-clash-node.htm" title="VPN高速节点 | 9月6日18.6M/S|免费Clash节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点/Singbox节点节点推荐">VPN高速节点 | 9月6日18.6M/S|免费Clash节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点/Singbox节点节点推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-4-clash-stash-node.htm" title="VPN高速节点 | 9月4日18.8M/S|免费Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/SSR节点/Singbox节点节点推荐">VPN高速节点 | 9月4日18.8M/S|免费Clash节点/Shadowrocket节点/V2ray节点/Trojan节点/SSR节点/Singbox节点节点推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-12-clash-node.htm" title="VPN高速节点 | 9月12日18.5M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Clash节点/Trojan节点/V2ray节点节点推荐">VPN高速节点 | 9月12日18.5M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Clash节点/Trojan节点/V2ray节点节点推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-2026-10-11.htm" title="VPN高速节点 | 10月11日19.3M/S|免费Singbox节点/SSR节点/V2ray节点/Shadowrocket节点/Trojan节点/Clash节点节点推荐">VPN高速节点 | 10月11日19.3M/S|免费Singbox节点/SSR节点/V2ray节点/Shadowrocket节点/Trojan节点/Clash节点节点推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-28-free-node-subscribe.htm" title="VPN高速节点 | 9月28日20.8M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/Trojan节点/SSR节点节点推荐">VPN高速节点 | 9月28日20.8M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/Trojan节点/SSR节点节点推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-2-clash-node-daily-updates.htm" title="VPN高速节点 | 9月2日20.4M/S|免费V2ray节点/SSR节点/Clash节点/Singbox节点/Shadowrocket节点/Trojan节点节点推荐">VPN高速节点 | 9月2日20.4M/S|免费V2ray节点/SSR节点/Clash节点/Singbox节点/Shadowrocket节点/Trojan节点节点推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-meta-github-2026-10-23.htm" title="VPN高速节点 | 10月23日21M/S|免费Singbox节点/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点/SSR节点节点推荐">VPN高速节点 | 10月23日21M/S|免费Singbox节点/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点/SSR节点节点推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-11-2-clash-node.htm" title="VPN高速节点 | 11月2日23M/S|免费Clash节点/Trojan节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点节点推荐">VPN高速节点 | 11月2日23M/S|免费Clash节点/Trojan节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点节点推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/clash-stash-2026-9-7.htm" title="VPN高速节点 | 9月7日21.6M/S|免费V2ray节点/Shadowrocket节点/Clash节点/Trojan节点/Singbox节点/SSR节点节点推荐">VPN高速节点 | 9月7日21.6M/S|免费V2ray节点/Shadowrocket节点/Clash节点/Trojan节点/Singbox节点/SSR节点节点推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-26-clash-verge-rev-github.htm" title="VPN高速节点 | 9月26日20.4M/S|免费SSR节点/Clash节点/Shadowrocket节点/Trojan节点/Singbox节点/V2ray节点节点推荐">VPN高速节点 | 9月26日20.4M/S|免费SSR节点/Clash节点/Shadowrocket节点/Trojan节点/Singbox节点/V2ray节点节点推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-stash-2026-10-21.htm" title="VPN高速节点 | 10月21日22.7M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Trojan节点/SSR节点/Singbox节点节点推荐">VPN高速节点 | 10月21日22.7M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Trojan节点/SSR节点/Singbox节点节点推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-16-clash-node.htm" title="VPN高速节点 | 10月16日19.6M/S|免费Singbox节点/SSR节点/V2ray节点/Clash节点/Shadowrocket节点/Trojan节点节点推荐">VPN高速节点 | 10月16日19.6M/S|免费Singbox节点/SSR节点/V2ray节点/Clash节点/Shadowrocket节点/Trojan节点节点推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-2-clash-stash-node.htm" title="VPN高速节点 | 10月2日20M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点/Clash节点节点推荐">VPN高速节点 | 10月2日20M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Singbox节点/Clash节点节点推荐</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -378,7 +378,10 @@ Sony设备的操作系统（如Android TV）对许多主流VPN和科学上网工
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2026-11/" title="2026-11 归档">2026-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
